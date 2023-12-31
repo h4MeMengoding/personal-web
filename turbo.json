@@ -1,0 +1,27 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "outputs": [".next/**", "!.next/cache/**", "public/**"],
+      "env": [
+        "NEXT_PUBLIC_UMAMI_WEBSITE_ID",
+        "NEXT_PUBLIC_UMAMI_SRC",
+        "SPOTIFY_CLIENT_ID",
+        "SPOTIFY_CLIENT_SECRET",
+        "SPOTIFY_REFRESH_TOKEN",
+        "SHORTENER_HOST_NAME",
+        "PORTFOLIO_ZONE_URL",
+        "PORTFOLIO_BUILD_ID",
+        "DATABASE_URL",
+        "DIRECT_URL"
+      ]
+    },
+    "lint": {
+      "outputs": [],
+      "inputs": [".eslintrc.*", "src/**"]
+    },
+    "type-check": {
+      "outputs": ["*.tsbuildinfo"]
+    }
+  }
+}
